@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'net.unicon.iam.jwtrest.demo'
+version = '2020.POC'
+sourceCompatibility = '11'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.bitbucket.b_c:jose4j:0.7.2'	
+}
+
+test {
+	useJUnitPlatform()
+}

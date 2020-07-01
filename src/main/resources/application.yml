@@ -1,0 +1,16 @@
+logging:
+  level:    
+    org.springframework: INFO
+
+#Sample embedded servlet container SSL config and session tracking mode. Change as appropriate for your local deployment environment
+server:
+  port: 8444
+  ssl:
+    enabled: true
+    key-store: /etc/cas/thekeystore
+    key-store-password: changeit
+
+
+
+
+
