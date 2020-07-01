@@ -28,12 +28,8 @@ public class JwtValidationFilter extends OncePerRequestFilter {
 
     private final String PREFIX = "Bearer ";
 
-    //Set as OS env variable CAS_JWT_SIGNING_SECRET
-    @Value("${CAS_JWT_SIGNING_SECRET}")
     private String signingSecret;
 
-    //Set as OS env variable CAS_JWT_ENCRYPTION_SECRET
-    @Value("${CAS_JWT_ENCRYPTION_SECRET}")
     private String encryptionSecret;
 
     public JwtValidationFilter(String signingSecret, String encryptionSecret) {
