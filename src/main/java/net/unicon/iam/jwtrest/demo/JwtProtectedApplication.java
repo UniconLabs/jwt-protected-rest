@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class JwtProtectedApplication {
 
+
 	//Set as OS env variable CAS_JWT_SIGNING_SECRET
 	@Value("${CAS_JWT_SIGNING_SECRET}")
 	private String signingSecret;
@@ -17,6 +18,10 @@ public class JwtProtectedApplication {
 	//Set as OS env variable CAS_JWT_ENCRYPTION_SECRET
 	@Value("${CAS_JWT_ENCRYPTION_SECRET}")
 	private String encryptionSecret;
+
+	//To test JWT verification failure when keys don't match
+	//private String signingSecret = "XZ4Iz7QkdRLPTJ6V1EYjXpgXbpXdZ3uixHOQ4AJVwyr6kkzqxmWCJhjEJiPaOGDqwsDHIGNP5AfEyGOGpOmSmQ";
+	//private String encryptionSecret = "9OytxHyMtfEs09Hitzfixmb3JWoFqnKYGKr0wgjeYJ4";
 
 	public static void main(String[] args) {
 		SpringApplication.run(JwtProtectedApplication.class, args);
