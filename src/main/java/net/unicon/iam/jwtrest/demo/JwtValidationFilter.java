@@ -43,8 +43,7 @@ public class JwtValidationFilter extends OncePerRequestFilter {
                                     FilterChain filterChain) throws ServletException, IOException {
 
         var jwtClaims = retrieveValidJwtClaims(request);
-        if (jwtClaims == null) {
-            response.setStatus(SC_FORBIDDEN);
+        if (jwtClaims == null) {            
             response.sendError(SC_FORBIDDEN);
         }
         filterChain.doFilter(request, response);
